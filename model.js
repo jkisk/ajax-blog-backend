@@ -1,6 +1,6 @@
 const shortid = require('short-id')
 const fs = require('fs')
-const blogJSON = fs.readFileSync('./data.json')
+let blogJSON = fs.readFileSync('./data.json')
 const blogPosts = JSON.parse(blogJSON)
 
 // create
@@ -20,12 +20,12 @@ const create = (title, content) => {
         content,
     }
 
-    blogPosts.push(post)
+    blogPosts.unshift(post)
 
     blogJSON = JSON.stringify(blogPosts)
     fs.writeFileSync('./data.json', blogJSON)
 
-    response = post
+    response = blogPosts
 
     return response
 }
