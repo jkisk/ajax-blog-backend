@@ -33,7 +33,8 @@ const create = (title, content) => {
 // get all
 
 const getAll = () => {
-    return blogJSON
+    
+    return blogPosts
 }
 
 // get one
