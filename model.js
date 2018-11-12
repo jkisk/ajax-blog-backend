@@ -7,33 +7,33 @@ const blogPosts = JSON.parse(blogJSON)
 
 const create = (title, content) => {
 
-  const errors = []
+    const errors = []
 
-  if(!title || !content) {
-      response.push(errors)
-    response = {errors}
-  }
-  
-  const post = {
-    id: shortid.generate(),
-    title,
-    content,
-  }
-  
-  blogPosts.push(post)
+    if (!title || !content) {
+        response.push(errors)
+        response = { errors }
+    }
 
-  let blogJSON = JSON.stringify(blogPosts)
-  fs.writeFileSync('./data.json', blogJSON)
+    const post = {
+        id: shortid.generate(),
+        title,
+        content,
+    }
 
-  response = post
+    blogPosts.push(post)
 
-  return response
+    blogJSON = JSON.stringify(blogPosts)
+    fs.writeFileSync('./data.json', blogJSON)
+
+    response = post
+
+    return response
 }
 
 // get all
 
-const getAll = (limit) => {
-  return limit ? blogJSON.slice(0, limit) : blogJSON
+const getAll = () => {
+    return blogJSON
 }
 
 // get one
