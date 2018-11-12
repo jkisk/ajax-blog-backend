@@ -13,7 +13,7 @@ function create(req, res, next) {
 
     }
 
-    res.status(201).json({ data: result })
+    res.status(201).json({ result })
 
 }
 
