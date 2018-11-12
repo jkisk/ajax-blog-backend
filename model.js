@@ -14,9 +14,6 @@ const create = (title, content) => {
     response = {errors}
   }
   
-  
-  
-  
   const post = {
     id: shortid.generate(),
     title,
@@ -36,7 +33,7 @@ const create = (title, content) => {
 // get all
 
 const getAll = (limit) => {
-  return limit ? blogPosts.slice(0, limit) : blogPosts
+  return limit ? blogJSON.slice(0, limit) : blogJSON
 }
 
 // get one
