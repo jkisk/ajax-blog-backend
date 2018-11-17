@@ -33,47 +33,10 @@ const create = (title, content) => {
 // get all
 
 const getAll = () => {
-    
+
     return blogPosts
 }
 
-// get one
-
-// const getOne = (id) => {
-//   return result = authors.find(b => b.id === id)
-// }
-
-// // update
-
-// const update = (id, body) => {
-
-//   const updateIndex = authors.findIndex(b => b.id === id)
-//   const errors = []
-//   const first = body.first
-//   const last = body.last
-//   let response
-
-//   if (!first) {
-//     errors.push('please provide first')
-//     response = { errors }
-//   }
-//   else {
-//     authors[updateIndex] = {
-//       id,
-//       title,
-//       first,
-//       last
-//     }
-//     response = authors[updateIndex]
-//   }
-//   return response
-// }
-// // delete
-
-// const remove = (id) => {
-//   const removeIndex = authors.findIndex(b => b.id === id)
-//   return authors.splice(removeIndex, 1)
-// }
 
 
 module.exports = { create, getAll }
