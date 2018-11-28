@@ -6,6 +6,8 @@ const ctrl = require('./controller.js')
 
 router.post('/', ctrl.create)
 router.get('/', ctrl.getAll )
+router.put('/:id', ctrl.update)
+router.delete('/:id', ctrl.remove)
 
 
 
